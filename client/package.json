@@ -1,0 +1,36 @@
+{
+  "name": "nalandarubbers",
+  "version": "1.0.0",
+  "proxy": "http://localhost:3001/",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.5.1",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "dotenv": "^8.2.0",
+    "if-env": "^1.0.4"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "lint-staged": "^9.4.2",
+    "pre-commit": "^1.2.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
