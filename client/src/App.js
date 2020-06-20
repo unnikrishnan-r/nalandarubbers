@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/HomePage";
 import AddProducts from "./pages/AddProducts"
+import Department from "./pages/Department"
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
         <Switch>
           {/* To render a component depending on the URL exact path hit in the browser*/}
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/addproducts" component={AddProducts} />
+          <Route exact path="/products" component={AddProducts} />
+
+          <Route exact path="/department" component={Department} />
 
         </Switch>
       </div>
