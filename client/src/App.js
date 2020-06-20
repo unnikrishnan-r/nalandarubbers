@@ -1,9 +1,10 @@
 // Importing all the components
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import MainPage from "./pages/MainPage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./pages/HomePage";
+import AddProducts from "./pages/AddProducts"
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         {/* Used to select which routes to take */}
         <Switch>
           {/* To render a component depending on the URL exact path hit in the browser*/}
-          {/* <Route exact path="/" component={MainPage} /> */}
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/addproducts" component={AddProducts} />
 
         </Switch>
       </div>
