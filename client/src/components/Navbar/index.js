@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav,NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Link } from "react-bootstrap";
 export default class index extends Component {
   render() {
     return (
@@ -10,13 +10,17 @@ export default class index extends Component {
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Products" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="addproducts">
-                Add Products
-              </NavDropdown.Item>
-              <NavDropdown.Item href="productcatalogue">
-                Product Catalogue
-              </NavDropdown.Item>
-            </NavDropdown>
+              <Nav.Link href="#addproducts">
+                <NavDropdown.Item href="addproducts">
+                  Add Products
+                </NavDropdown.Item>
+              </Nav.Link>
+              <Nav.Link href="#productcatalog">
+                <NavDropdown.Item href="productcatalog">
+                  Product Catalog
+                </NavDropdown.Item>
+              </Nav.Link>
+              </NavDropdown>
             <Nav.Link href="#customers">Customer Management</Nav.Link>
             <Nav.Link href="#orders">Purchase Order</Nav.Link>
             <Nav.Link href="#sales">Generate Bill</Nav.Link>
