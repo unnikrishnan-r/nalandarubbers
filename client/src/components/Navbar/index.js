@@ -16,7 +16,10 @@ export default class index extends Component {
               </Link>
             </Nav.Item>
             <NavDropdown title="Admin" id="basic-nav-dropdown">
-              <NavDropdown.Item>
+            <NavDropdown.Item>
+                <Link to={"/newcustomer"}>Add Customer</Link>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item>
                 <Link to={"/department"}>Department</Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
@@ -24,7 +27,7 @@ export default class index extends Component {
               </NavDropdown.Item>
               <NavDropdown.Item>
                 <Link to={"/products"}>Products</Link>
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
