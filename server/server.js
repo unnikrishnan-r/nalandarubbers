@@ -1,13 +1,14 @@
 require("dotenv").config();
 var express = require("express");
+var morgan = require('morgan')
 
 
 
+var db = require("./database/models");
 
-// var db = require("./database/models");
-
-// const routes = require("./routes");
+const routes = require("./routes");
 const app = express();
+app.use(morgan('tiny'))
 const PORT = process.env.PORT || 3001;
 
 // Middleware
@@ -19,13 +20,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Routes
-// app.use(routes);
+app.use(routes);
 
 var syncOptions = {};
 syncOptions.force = process.env.SYNC_MODEL === "true" ? true : false;
 
 // Starting the server, syncing our models ------------------------------------/
-// db.sequelizeConnection.sync(syncOptions).then(function () {
+db.sequelizeConnection.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
@@ -33,6 +34,6 @@ syncOptions.force = process.env.SYNC_MODEL === "true" ? true : false;
       PORT
     );
   });
-// });
+});
 
 module.exports = app;

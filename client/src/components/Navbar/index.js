@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown, Link } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { withRouter, Link } from "react-router-dom";
+
 export default class index extends Component {
   render() {
     return (
@@ -8,23 +10,25 @@ export default class index extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Products" id="collasible-nav-dropdown">
-              <Nav.Link href="#addproducts">
-                <NavDropdown.Item href="addproducts">
-                  Add Products
-                </NavDropdown.Item>
-              </Nav.Link>
-              <Nav.Link href="#productcatalog">
-                <NavDropdown.Item href="productcatalog">
-                  Product Catalog
-                </NavDropdown.Item>
-              </Nav.Link>
-              </NavDropdown>
-            <Nav.Link href="#customers">Customer Management</Nav.Link>
-            <Nav.Link href="#orders">Purchase Order</Nav.Link>
-            <Nav.Link href="#sales">Generate Bill</Nav.Link>
-            <Nav.Link href="#sales">Reports</Nav.Link>
+            <Nav.Item href={"/"} className="mr-3 pt-2">
+              <Link to={"/"} style={{ color: "white" }}>
+                HOME
+              </Link>
+            </Nav.Item>
+            <NavDropdown title="Admin" id="basic-nav-dropdown">
+            <NavDropdown.Item>
+                <Link to={"/newcustomer"}>Add Customer</Link>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Item>
+                <Link to={"/department"}>Department</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to={"/supplier"}>Suppliers</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to={"/products"}>Products</Link>
+              </NavDropdown.Item> */}
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
