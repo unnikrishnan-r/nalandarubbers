@@ -38,7 +38,7 @@
     "moment": "^2.24.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.0.0",
-    "sequelize": "^5.21.2"
+    "sequelize": "^6.29.0"
   },
   "bugs": {
     "url": "https://github.com/unnikrishnan-r/nalandarubbers/issues"
